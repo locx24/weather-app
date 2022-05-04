@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+header{
+    text-align: center;
+}
+
 body {
     font-family: "Segoe UI";
     background-color: #A2AAAD;
@@ -15,7 +19,7 @@ body {
     margin: 100px;
 }
 input[type="text"]{
-
+    
     height:50px;
     width:600px;
     background:#e7e7e7;
@@ -37,22 +41,28 @@ input[type="submit"]{
     font-size:20px;
     border:none;
     border-radius: 2px;
+    top: 100px;
 }
 
 .display{
-
     text-align: center;
 }
 
 .describeData{
-    
+    font-size: 20px;
     position:relative;
     text-align: center;
     right:145px;
     bottom:65px;
  }
    
- #logo{
+parent{
+    position: relative;
+}
+
+ #logo{ 
+    position:absolute;
+    left: 370px; 
    max-width: 100%;
    height: auto;
  }

@@ -1,4 +1,4 @@
-import myKey from "./env";
+import {REACT_APP_API_KEY} from './env'
 
 var button = document.querySelector('.button')
 var inputValue = document.querySelector('.inputValue')
@@ -8,7 +8,9 @@ var temp = document.querySelector('.temp');
 
 button.addEventListener('click', function(){
 
-    fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&appid=12f9e8816ae91b7c305ff746221c4023&units=imperial')
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=inputValue.value=${REACT_APP_API_KEY}`)
+
+//'&appid=12f9e881 6ae91b7c305ff746221c4023&units=imperial'
     .then(response => response.json())
     .then(data => {
         console.log(data)
@@ -21,7 +23,5 @@ button.addEventListener('click', function(){
         desc.innerHTML = descValue;
     })
 
-
 .catch(err => alert("Wrong city name. Please try again."))    
 })
-
